@@ -5,7 +5,7 @@ COPY package.json package.json
 RUN npm install --silent
 COPY . .
 ARG target
-RUN ng build --target=prod --build-optimizer
+RUN ng build --target=production --build-optimizer
 
 FROM nginx:alpine
 LABEL author="Scott Kraemer"
