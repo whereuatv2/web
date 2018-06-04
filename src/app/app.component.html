@@ -1,0 +1,55 @@
+<!-- <div fxLayout="column" fxFlex>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Whereuat?</span>
+
+    <span fxFlex></span>
+    <div *ngIf="auth.user$ | async as user">
+      <img *ngIf="user.picture" src="{{user.picture}}" style="height:2em;width:2em;border-radius:50%;vertical-align:middle">
+      <span>Hi, {{user.name | titlecase}}</span>
+    </div>
+    <button mat-button *ngIf="!auth.authenticated" (click)="auth.login()">Login</button>
+    <button mat-button *ngIf="auth.authenticated" (click)="auth.logout()">Logout</button>
+    <button mat-icon-button [matMenuTriggerFor]="themeMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-menu #themeMenu x-position="before">
+    <button mat-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </mat-menu> -->
+
+<!-- <mat-sidenav-container fxFlex>
+    <mat-sidenav #sidenav mode="over" class="app-sidenav">
+
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <span>
+            <mat-icon>account_circle</mat-icon>Scott Kraemer</span>
+        </mat-toolbar-row>
+
+      </mat-toolbar>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container> -->
+<!-- <router-outlet></router-outlet>
+</div> -->
+
+<mat-toolbar color="primary">
+  <!-- <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button> -->
+  <span>Whereuat?</span>
+
+  <span fxFlex></span>
+  <div *ngIf="auth.user$ | async as user">
+    <img *ngIf="user.picture" src="{{user.picture}}" style="height:2em;width:2em;border-radius:50%;vertical-align:middle">
+    <span>Hi, {{user.name | titlecase}}</span>
+  </div>
+  <button mat-button *ngIf="!auth.authenticated" (click)="auth.login()">Login</button>
+  <button mat-button *ngIf="auth.authenticated" (click)="auth.logout()">Logout</button>
+</mat-toolbar>
+<router-outlet></router-outlet>

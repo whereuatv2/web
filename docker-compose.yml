@@ -1,0 +1,12 @@
+version: '2.1'
+#used to build whereuatv2/web image
+services:
+  whereuatv2-web:
+    image: whereuatv2/web
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 80:80
+    ## set your startup file here
+    command: [nginx-debug, '-g', 'daemon off;']
